@@ -1,0 +1,15 @@
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\bin\Debug\Prevod za carinu.exe.config
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\bin\Debug\Prevod za carinu.exe
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\bin\Debug\Prevod za carinu.pdb
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.csprojAssemblyReference.cache
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\MainWindow.g.cs
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\App.g.cs
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu_MarkupCompile.cache
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu_MarkupCompile.lref
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\MainWindow.baml
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.g.resources
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod_za_carinu.Properties.Resources.resources
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.csproj.GenerateResource.cache
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.csproj.CoreCompileInputs.cache
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.exe
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.pdb
