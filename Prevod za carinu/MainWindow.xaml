@@ -18,6 +18,6 @@
         <Image Margin="0,356,5,0" Source="kisspng-lighting-eglo-canada-inc-light-fixture-5b08046a577f83.1202846415272520743584 (1).png" Stretch="Fill" Grid.ColumnSpan="2" Opacity="0.9"/>
         <Button x:Name="btnRestart" Content="Restart" HorizontalAlignment="Left" Margin="0,346,0,0" VerticalAlignment="Top" Width="245" Height="51" Click="BtnRestart_Click" Opacity="0.5" Grid.Column="2" FontSize="24" FontWeight="Bold" Foreground="#FF274F70"/>
         <fa:ImageAwesome x:Name="loadingAnimation" Icon="Spinner" Spin="True" Grid.ColumnSpan="2" Margin="30,78,114,169" Grid.Column="1" Opacity="0.6" SpinDuration="2" />
-        <Label x:Name="lblObrada" Content="Obrada je u toku. Molimo sacekajte minut, dva..." HorizontalAlignment="Left" Margin="69,332,0,0" VerticalAlignment="Top" Height="35" Width="420" FontSize="18" Grid.ColumnSpan="3" Foreground="#FFB5A5A7" FontWeight="Bold"/>
+        <Label x:Name="lblObrada" Content="Obrada je u toku. Molimo sacekajte minut..." HorizontalAlignment="Left" Margin="90,332,0,0" VerticalAlignment="Top" Height="35" Width="420" FontSize="18" Grid.ColumnSpan="3" Foreground="#FFB5A5A7" FontWeight="Bold"/>
     </Grid>
 </Window>

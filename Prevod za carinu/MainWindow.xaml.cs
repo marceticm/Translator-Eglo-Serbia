@@ -46,7 +46,7 @@ namespace Prevod_za_carinu
                     return;
                 }
             }
-            Task task = new Task(()=>Translation(fileName));
+            Task task = new Task(() => Translation(fileName));
             task.Start();
             btnUvuciteFakturu.Visibility = Visibility.Hidden;
             loadingAnimation.Visibility = Visibility.Visible;
@@ -83,7 +83,7 @@ namespace Prevod_za_carinu
                     {
                         valuesExtended[i] = values[i - 1];
                     }
-                    if (sifra.Contains("GL"))
+                    if (sifra.Contains("GL") || sifra.Contains("KAB") || sifra.Contains("KAT"))
                     {
                         valuesExtended[4] = Prevodi.PrevodPoSifri(sifra);
                     }
@@ -93,12 +93,12 @@ namespace Prevod_za_carinu
                     }
                     for (int i = 1; i <= valuesExtended.Count(); i++)
                     {
-                        // prvi red bold
                         excel.Cells[brRedova, i].Value2 = valuesExtended[i - 1];
                     }
                     brRedova++;
                 }
             }
+            excel.Cells[1, 1].EntireRow.Font.Bold = true;
             excel.Columns.AutoFit();
             wb.SaveAs(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
                 + @"\Prevod " + DateTime.Now.ToShortDateString() + ".xlsx");
