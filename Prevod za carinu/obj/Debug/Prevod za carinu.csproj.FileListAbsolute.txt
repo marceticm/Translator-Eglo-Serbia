@@ -13,3 +13,6 @@ C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carin
 C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.csproj.CoreCompileInputs.cache
 C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.exe
 C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.pdb
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\bin\Debug\FontAwesome.WPF.dll
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\bin\Debug\FontAwesome.WPF.xml
+C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.csproj.CopyComplete

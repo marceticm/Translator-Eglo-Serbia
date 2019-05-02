@@ -27,16 +27,15 @@ namespace Prevod_za_carinu
         {
             InitializeComponent();
             btnRestart.Visibility = Visibility.Hidden;
+            loadingAnimation.Visibility = Visibility.Hidden;
+            lblObrada.Visibility = Visibility.Hidden;
         }
 
         private string fileName;
-        private List<string> opisi = new List<string>();
 
-        private void BtnUvuciteFakturu_Click(object sender, RoutedEventArgs e)
+        private async void BtnUvuciteFakturu_Click(object sender, RoutedEventArgs e)
         {
-            btnUvuciteFakturu.Visibility = Visibility.Hidden;
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
-
             if (openFileDialog1.ShowDialog() ?? false)
             {
                 fileName = openFileDialog1.FileName;
@@ -47,31 +46,36 @@ namespace Prevod_za_carinu
                     return;
                 }
             }
+            Task task = new Task(()=>Translation(fileName));
+            task.Start();
+            btnUvuciteFakturu.Visibility = Visibility.Hidden;
+            loadingAnimation.Visibility = Visibility.Visible;
+            lblObrada.Visibility = Visibility.Visible;
+            await task;
+            lblObrada.Visibility = Visibility.Hidden;
+            loadingAnimation.Visibility = Visibility.Hidden;
+            MessageBox.Show("Operacija uspela!\nPrevod je sacuvan.");
+            btnRestart.Visibility = Visibility.Visible;
+        }
 
-            var encoding = Encoding.UTF8;
-
-            opisi = new List<string>();
-
+        public void Translation(string fileName)
+        {
             var excel = new Microsoft.Office.Interop.Excel.Application();
             excel.Visible = false;
             Workbook wb = excel.Workbooks.Add();
-
             var brRedova = 1;
-
-            // staviti exception ako je fajl otvoren
-            using (var reader = new StreamReader(fileName, encoding))
+            // staviti exception ako je fajl otvoren i ako je empty path name
+            using (var reader = new StreamReader(fileName, Encoding.UTF8))
             {
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
                     var values = line.Split(new char[] { ';' });
                     var valuesExtended = new string[values.Length + 1];
-
                     for (int i = 0; i < 4; i++)
                     {
                         valuesExtended[i] = values[i];
                     }
-
                     var opis = values[3];
                     var sifra = values[2];
                     valuesExtended[4] = "";
@@ -79,7 +83,6 @@ namespace Prevod_za_carinu
                     {
                         valuesExtended[i] = values[i - 1];
                     }
-
                     if (sifra.Contains("GL"))
                     {
                         valuesExtended[4] = Prevodi.PrevodPoSifri(sifra);
@@ -88,7 +91,6 @@ namespace Prevod_za_carinu
                     {
                         valuesExtended[4] = Prevodi.PrevodPoOpisu(opis);
                     }
-
                     for (int i = 1; i <= valuesExtended.Count(); i++)
                     {
                         // prvi red bold
@@ -97,17 +99,11 @@ namespace Prevod_za_carinu
                     brRedova++;
                 }
             }
-
             excel.Columns.AutoFit();
-
             wb.SaveAs(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
                 + @"\Prevod " + DateTime.Now.ToShortDateString() + ".xlsx");
-
             wb.Close();
             excel.Quit();
-
-            MessageBox.Show("Operacija uspela!\nPrevod je sacuvan.");
-            btnRestart.Visibility = Visibility.Visible;
         }
 
         private void BtnRestart_Click(object sender, RoutedEventArgs e)

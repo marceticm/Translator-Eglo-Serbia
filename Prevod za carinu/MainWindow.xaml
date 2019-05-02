@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prevod_za_carinu"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="573">
     <Grid Margin="0,0,2,0" RenderTransformOrigin="1,0.496">
@@ -16,6 +17,7 @@
         <Button x:Name="btnUvuciteFakturu" Content="Uvucite fakturu" HorizontalAlignment="Left" Margin="0,356,0,0" VerticalAlignment="Top" Width="245" Height="51" Click="BtnUvuciteFakturu_Click" Opacity="0.5" Grid.Column="2" FontSize="24" FontWeight="Bold" Foreground="#FF274F70"/>
         <Image Margin="0,356,5,0" Source="kisspng-lighting-eglo-canada-inc-light-fixture-5b08046a577f83.1202846415272520743584 (1).png" Stretch="Fill" Grid.ColumnSpan="2" Opacity="0.9"/>
         <Button x:Name="btnRestart" Content="Restart" HorizontalAlignment="Left" Margin="0,346,0,0" VerticalAlignment="Top" Width="245" Height="51" Click="BtnRestart_Click" Opacity="0.5" Grid.Column="2" FontSize="24" FontWeight="Bold" Foreground="#FF274F70"/>
-
+        <fa:ImageAwesome x:Name="loadingAnimation" Icon="Spinner" Spin="True" Grid.ColumnSpan="2" Margin="30,78,114,169" Grid.Column="1" Opacity="0.6" SpinDuration="2" />
+        <Label x:Name="lblObrada" Content="Obrada je u toku. Molimo sacekajte minut, dva..." HorizontalAlignment="Left" Margin="69,332,0,0" VerticalAlignment="Top" Height="35" Width="420" FontSize="18" Grid.ColumnSpan="3" Foreground="#FFB5A5A7" FontWeight="Bold"/>
     </Grid>
 </Window>
