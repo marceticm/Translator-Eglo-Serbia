@@ -65,39 +65,55 @@ namespace Prevod_za_carinu
             Workbook wb = excel.Workbooks.Add();
             var brRedova = 1;
             // staviti exception ako je fajl otvoren i ako je empty path name
-            using (var reader = new StreamReader(fileName, Encoding.UTF8))
+
+            try
             {
-                while (!reader.EndOfStream)
+                using (var reader = new StreamReader(fileName, Encoding.UTF8))
                 {
-                    var line = reader.ReadLine();
-                    var values = line.Split(new char[] { ';' });
-                    var valuesExtended = new string[values.Length + 1];
-                    for (int i = 0; i < 4; i++)
+                    while (!reader.EndOfStream)
                     {
-                        valuesExtended[i] = values[i];
+                        var line = reader.ReadLine();
+                        var values = line.Split(new char[] { ';' });
+                        var valuesExtended = new string[values.Length + 1];
+                        for (int i = 0; i < 4; i++)
+                        {
+                            valuesExtended[i] = values[i];
+                        }
+                        var opis = values[3];
+                        var sifra = values[2];
+                        valuesExtended[4] = "";
+                        for (int i = 5; i < valuesExtended.Length; i++)
+                        {
+                            valuesExtended[i] = values[i - 1];
+                        }
+                        if (sifra.Contains("GL") || sifra.Contains("KAB") || sifra.Contains("KAT"))
+                        {
+                            valuesExtended[4] = Prevodi.PrevodPoSifri(sifra);
+                        }
+                        else
+                        {
+                            valuesExtended[4] = Prevodi.PrevodPoOpisu(opis);
+                        }
+                        for (int i = 1; i <= valuesExtended.Count(); i++)
+                        {
+                            excel.Cells[brRedova, i].Value2 = valuesExtended[i - 1];
+                        }
+                        brRedova++;
                     }
-                    var opis = values[3];
-                    var sifra = values[2];
-                    valuesExtended[4] = "";
-                    for (int i = 5; i < valuesExtended.Length; i++)
-                    {
-                        valuesExtended[i] = values[i - 1];
-                    }
-                    if (sifra.Contains("GL") || sifra.Contains("KAB") || sifra.Contains("KAT"))
-                    {
-                        valuesExtended[4] = Prevodi.PrevodPoSifri(sifra);
-                    }
-                    else
-                    {
-                        valuesExtended[4] = Prevodi.PrevodPoOpisu(opis);
-                    }
-                    for (int i = 1; i <= valuesExtended.Count(); i++)
-                    {
-                        excel.Cells[brRedova, i].Value2 = valuesExtended[i - 1];
-                    }
-                    brRedova++;
                 }
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Doslo je do greske.\nProverite da li je fajl otvoren i ako jeste zatvorite ga." +
+                        "\nAplikacija ce se restartovati.", "UPOZORENJE!");
+                System.Diagnostics.Process.Start(System.Windows.Application.ResourceAssembly.Location);
+                this.Dispatcher.Invoke(() =>
+                {
+                    System.Windows.Application.Current.Shutdown();
+                });
+            }
+
+
             excel.Cells[1, 1].EntireRow.Font.Bold = true;
             excel.Columns.AutoFit();
             wb.SaveAs(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
