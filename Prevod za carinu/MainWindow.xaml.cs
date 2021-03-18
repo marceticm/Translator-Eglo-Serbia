@@ -1,20 +1,11 @@
 ﻿using Microsoft.Office.Interop.Excel;
 using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Prevod_za_carinu
 {
@@ -86,7 +77,12 @@ namespace Prevod_za_carinu
                         {
                             valuesExtended[i] = values[i - 1];
                         }
-                        if (sifra.Contains("GL") || sifra.Contains("KAB") || sifra.Contains("KAT"))
+                        if (sifra.Contains("GL")
+                            || sifra.Contains("GA")
+                            || sifra.Contains("GC")
+                            || sifra.Contains("GE")
+                            || sifra.Contains("KAB")
+                            || sifra.Contains("KAT"))
                         {
                             valuesExtended[4] = Prevodi.PrevodPoSifri(sifra);
                         }

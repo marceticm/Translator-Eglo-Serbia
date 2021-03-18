@@ -16,3 +16,22 @@ C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carin
 C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\bin\Debug\FontAwesome.WPF.dll
 C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\bin\Debug\FontAwesome.WPF.xml
 C:\Users\Milan\Dropbox\Documents\cSharpProgrami\Prevod za carinu\Prevod za carinu\obj\Debug\Prevod za carinu.csproj.CopyComplete
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\bin\Debug\Prevod za carinu.exe.config
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\bin\Debug\Prevod za carinu.exe
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\bin\Debug\Prevod za carinu.pdb
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\bin\Debug\FontAwesome.WPF.dll
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\bin\Debug\FontAwesome.WPF.xml
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu.csprojAssemblyReference.cache
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu.csproj.ResolveComReference.cache
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\MainWindow.g.cs
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\App.g.cs
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu_MarkupCompile.cache
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu_MarkupCompile.lref
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\MainWindow.baml
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu.g.resources
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod_za_carinu.Properties.Resources.resources
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu.csproj.GenerateResource.cache
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu.csproj.CoreCompileInputs.cache
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu.csproj.CopyComplete
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu.exe
+C:\Projects\Translator-Eglo-Serbia\Prevod za carinu\obj\Debug\Prevod za carinu.pdb
